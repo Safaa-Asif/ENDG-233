@@ -1,6 +1,5 @@
 # analysis.py FINAL DRAFT
 # ENDG 233 F25
-# Safaa Asif 30274206
 # A terminal-based program for analyzing home sales records.
 
 import records
