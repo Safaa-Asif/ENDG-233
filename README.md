@@ -1,5 +1,5 @@
 # ENDG-233
-Collection of portfolio projects from ENDG 233 (Programming with Data), covering programming concepts such as control flow, functions, data structures, and file handling.
+Collection of portfolio projects from ENDG 233 (Programming with Data), covering programming concepts such as control flow, functions, data structures, file handling, pseudocode, and flowcharts.
 
 PORTFOLIO PROJECT #1:
 Designed a simulation that models the completion time of a car in a speed race. The program:
