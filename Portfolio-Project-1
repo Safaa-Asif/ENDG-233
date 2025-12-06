@@ -1,0 +1,49 @@
+# ENDG 233 Fall 2025 - Portfolio Project 1 (Final Draft)
+
+import math                                                            # So I can use round function
+car_number = int(input("Select a car number: "))                       # Read car number
+driver_number = int(input("Select a driver number: "))                 # Read driver number
+race_distance = int(input("How long is the race in kilometers?: "))    # Read racing distance
+is_wet = input("Is the road going to be wet? (True or False): ")       # Read road conditions
+
+if (car_number > 3) or (car_number < 1) or (driver_number > 3) or (driver_number < 1):      # Ensure inputs are valid
+    print("Input number not recognized.")
+
+# Define Constants 
+else:                       
+    if (car_number == 1):
+        SPEED = 250                        # 250 km/h
+        FUEL_CAP = 60                      # 60 litres
+        FUEL_EFF = 7.3                     # 7.3 km/L
+    elif (car_number == 2):
+        SPEED = 311                        # 311 km/h
+        FUEL_CAP = 64                      # 64 litres
+        FUEL_EFF = 7.2                     # 7.2 km/L 
+    else:
+        SPEED = 375                        # 375 km/h
+        FUEL_CAP = 70                      # 70 litres
+        FUEL_EFF = 5.2                     # 5.2 km/L
+
+# Calculating time WITHOUT multipliers
+    base_time = race_distance / SPEED                                  # Calculate base time
+    tank_range = FUEL_CAP * FUEL_EFF                                   # Calculat max distance (km) travelled on full tank
+    refuels = math.ceil((race_distance - tank_range) / tank_range)     # Calculate # of refuels after tank empties (rounded up)
+    refueling_time = refuels * (5 / 60)                                # Calculate refuel time (hrs), (5/60) converts 5 mins into hrs
+    fuel_adjusted_time = base_time + refueling_time                    # (Re)Calculate time (hrs)
+
+# Calculating time WITH driver multiplier applied
+    if (driver_number == 1):
+        driver_adjusted_time = fuel_adjusted_time * 1.1
+    elif (driver_number == 2):
+        driver_adjusted_time = fuel_adjusted_time * 1.2
+    else:
+        driver_adjusted_time = fuel_adjusted_time * 1.3
+
+# Calculate time WITH road conditions multiplier ALSO applied
+    if (is_wet == "True"):
+        total_time = driver_adjusted_time * 1.2
+    else:
+        total_time = driver_adjusted_time
+
+ # Display the car number, driver number, race distance (km), and total time (hrs) (rounded to one decimal)
+    print ("The total travel time for Car", car_number, "with Driver", driver_number, "to travel", race_distance, "km is", round(total_time, 1), "hours.")
