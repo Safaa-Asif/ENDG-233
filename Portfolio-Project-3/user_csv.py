@@ -1,7 +1,5 @@
 # user_csv.py
 # ENDG 233 F25
-# Safaa Asif, Doaa Irshad
-# Safaa & Doaa
 # A terminal-based data analysis and visualization program in Python.
 
 from functions.our_funcs import pick_csv
