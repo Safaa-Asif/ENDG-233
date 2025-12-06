@@ -1,6 +1,5 @@
 # records.py
 # ENDG 233 F24
-#
 # Data is provided below to be used with analysis.py. Both files must remain in the same directory.
 # Do not modify the code in this section.
 # You may not hardcode (manually enter in the code) any other data.
